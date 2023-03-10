@@ -19,4 +19,4 @@ PetStoreAPI class check-list
 | 2 | Check orders with negative id  method GET, response  404                  | Passed |
 | 3 | Check order id 9 status, method GET, response 200                         | Passed |
 | 4 | Check order id 3 status, method GET, response 200                         | Passed |
-| 5 | Check invenroty status, method GET, response 200                          | Passed |
+| 5 | Check inventory status, method GET, response 200                          | Passed |
