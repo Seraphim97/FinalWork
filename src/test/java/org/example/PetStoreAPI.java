@@ -31,7 +31,7 @@ public class PetStoreAPI {
                 then().
                 log().
                 all().
-                statusCode(200);
+                statusCode(HttpStatus.SC_OK);
     }
 
 

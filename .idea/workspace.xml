@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Api.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/PetStoreAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/readme.md" afterDir="false" />
+    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +48,15 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\savic\IdeaProjects\ClassWork" />
+      <recent name="C:\Users\savic\IdeaProjects\ClassWork\src\main" />
+      <recent name="C:\Users\savic\IdeaProjects\ClassWork\src\test" />
+      <recent name="C:\Users\savic\IdeaProjects\ClassWork\src" />
+      <recent name="C:\Users\savic\IdeaProjects\ClassWork\.idea" />
+    </key>
+  </component>
   <component name="RunManager" selected="JUnit.PetStoreAPI">
     <configuration name="PetStoreAPI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
@@ -156,6 +156,32 @@
       <option name="presentableId" value="Default" />
       <updated>1678381818758</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1678477529049</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678477529049</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial commit">
+      <created>1678477552815</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678477552815</updated>
+    </task>
+    <task id="LOCAL-00003" summary="initial commit">
+      <created>1678477572436</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678477572436</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
