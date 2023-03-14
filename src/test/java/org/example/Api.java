@@ -1,6 +1,8 @@
 package org.example;
 
+import dto.OrderDto;
 import io.restassured.RestAssured;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -31,7 +33,7 @@ public class Api {
                 then().
                 log().
                 all().
-                statusCode(200);
+                statusCode(HttpStatus.SC_OK);
     }
 
     @ParameterizedTest
@@ -68,13 +70,19 @@ public class Api {
                 statusCode(HttpStatus.SC_BAD_REQUEST);
     }
 
-    String order = "{\"customerName\":\"name\",\"customerPhone\":\"123456\",\"comment\":\"comment\"}";
+
     @Test
     public void createOrderAndCheckStatusCode() {
+        OrderDto orderDto = new OrderDto("testname", "1234567", "no");
+
+        OrderDto orderDtoRandom = new OrderDto();
+        orderDtoRandom.setCustomerName( genereteRandomName());
+        orderDtoRandom.setCustomerPhone( genereteRandomPhone());
+        orderDtoRandom.setComment( genereteRandomComment());
 
         given()
                 .header("Content-type", "application/json")
-                .body(order)
+                .body(orderDto)
                 .log()
                 .all()
                 .post("/test-orders")
@@ -90,9 +98,11 @@ public class Api {
 
     @Test
     public void createOrderAndCheckStatusCodeNegative() {
+        OrderDto orderDto = new OrderDto("testname", "1234567","no");
+        
 
         given()
-                .body(order)
+                .body(orderDto)
                 .log()
                 .all()
                 .post("/test-orders")
@@ -116,11 +126,25 @@ public class Api {
                 then().
                 log().
                 all().
-                statusCode(200).
+                statusCode(HttpStatus.SC_OK).
                 and().
                 extract().
                 path("status");
         Assertions.assertTrue( statusId.contains("OPEN"));
+    }
+
+    public String genereteRandomName() {
+        return RandomStringUtils.random(10, true, false);
+
+
+    }
+
+    public String genereteRandomPhone() {
+        return RandomStringUtils.random(10, false,true);
+    }
+
+    public String genereteRandomComment () {
+        return RandomStringUtils.random(5,true,true);
     }
 
 

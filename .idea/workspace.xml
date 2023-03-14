@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="initial commit">
+    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="status 200 changed to HttpStatus.SC_OK">
+      <change afterPath="$PROJECT_DIR$/src/test/java/dto/OrderDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Api.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +60,39 @@
       <recent name="C:\Users\savic\IdeaProjects\ClassWork\.idea" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PetStoreAPI">
+  <component name="RunManager" selected="JUnit.Api.createOrderAndCheckStatusCode">
+    <configuration name="Api.createOrderAndCheckStatusCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ClassWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Api" />
+      <option name="METHOD_NAME" value="createOrderAndCheckStatusCode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Api.createOrderAndCheckStatusCodeNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ClassWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Api" />
+      <option name="METHOD_NAME" value="createOrderAndCheckStatusCodeNegative" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PetStoreAPI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
       <extension name="coverage">
@@ -105,45 +140,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetStoreAPI.simpleBodyGetPetSecondTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ClassWork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PetStoreAPI" />
-      <option name="METHOD_NAME" value="simpleBodyGetPetSecondTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PetStoreAPI.simpleBodyGetPetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ClassWork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PetStoreAPI" />
-      <option name="METHOD_NAME" value="simpleBodyGetPetTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Api.createOrderAndCheckStatusCode" />
+        <item itemvalue="JUnit.Api.createOrderAndCheckStatusCodeNegative" />
+        <item itemvalue="JUnit.PetStoreAPI.petsNegativeTest" />
         <item itemvalue="JUnit.PetStoreAPI" />
         <item itemvalue="JUnit.PetStoreAPI.getInventoryTest" />
-        <item itemvalue="JUnit.PetStoreAPI.simpleBodyGetPetSecondTest" />
-        <item itemvalue="JUnit.PetStoreAPI.simpleBodyGetPetTest" />
-        <item itemvalue="JUnit.PetStoreAPI.petsNegativeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -177,11 +180,19 @@
       <option name="project" value="LOCAL" />
       <updated>1678477572436</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="status 200 changed to HttpStatus.SC_OK">
+      <created>1678636290680</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678636290680</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="status 200 changed to HttpStatus.SC_OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="status 200 changed to HttpStatus.SC_OK" />
   </component>
 </project>
