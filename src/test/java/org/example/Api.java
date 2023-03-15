@@ -73,7 +73,7 @@ public class Api {
 
     @Test
     public void createOrderAndCheckStatusCode() {
-        OrderDto orderDto = new OrderDto("testname", "1234567", "no");
+        // OrderDto orderDto = new OrderDto("testname", "1234567", "no");
 
         OrderDto orderDtoRandom = new OrderDto();
         orderDtoRandom.setCustomerName( genereteRandomName());
@@ -82,7 +82,7 @@ public class Api {
 
         given()
                 .header("Content-type", "application/json")
-                .body(orderDto)
+                .body(orderDtoRandom)
                 .log()
                 .all()
                 .post("/test-orders")

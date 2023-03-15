@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="status 200 changed to HttpStatus.SC_OK">
-      <change afterPath="$PROJECT_DIR$/src/test/java/dto/OrderDto.java" afterDir="false" />
+    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="new methods added, statusCode changed to HttpStatus">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Api.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,12 +185,20 @@
       <option name="project" value="LOCAL" />
       <updated>1678636290680</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="new methods added, statusCode changed to HttpStatus">
+      <created>1678819961783</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678819961783</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="status 200 changed to HttpStatus.SC_OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="status 200 changed to HttpStatus.SC_OK" />
+    <MESSAGE value="new methods added, statusCode changed to HttpStatus" />
+    <option name="LAST_COMMIT_MESSAGE" value="new methods added, statusCode changed to HttpStatus" />
   </component>
 </project>
