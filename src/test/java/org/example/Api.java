@@ -1,7 +1,9 @@
 package org.example;
 
-import dto.OrderDto;
+import com.google.gson.Gson;
+import dto.OrderTestDto;
 import io.restassured.RestAssured;
+import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
@@ -11,6 +13,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Api {
 
@@ -73,24 +77,41 @@ public class Api {
 
     @Test
     public void createOrderAndCheckStatusCode() {
-        // OrderDto orderDto = new OrderDto("testname", "1234567", "no");
+         OrderTestDto orderDto = new OrderTestDto("testname", "1234567", "no");
 
-        OrderDto orderDtoRandom = new OrderDto();
+        OrderTestDto orderDtoRandom = new OrderTestDto();
         orderDtoRandom.setCustomerName( genereteRandomName());
         orderDtoRandom.setCustomerPhone( genereteRandomPhone());
         orderDtoRandom.setComment( genereteRandomComment());
 
-        given()
+        Gson gson = new Gson();
+
+       Response response = given()
                 .header("Content-type", "application/json")
-                .body(orderDtoRandom)
+                .body(orderDto)
                 .log()
                 .all()
                 .post("/test-orders")
                 .then()
                 .log()
                 .all()
-                .assertThat()
-                .statusCode(HttpStatus.SC_OK);
+                .extract()
+                .response();
+
+       OrderTestDto orderDtoReceived = gson.fromJson( response.asString(), OrderTestDto.class);
+
+       assertEquals( orderDto.getCustomerName(), orderDtoReceived.getCustomerName());
+       assertEquals( orderDto.getCustomerPhone(), orderDtoReceived.getCustomerPhone());
+       assertEquals( orderDto.getComment(), orderDtoReceived.getComment());
+       Assertions.assertNotNull( orderDtoReceived.getId());
+       Assertions.assertNull(orderDtoReceived.getStatus());
+
+        assertAll(
+                "Grouped Assertions of User",
+                () -> assertEquals("noo", orderDtoReceived.getComment(), "1 st Assert"),
+                () -> assertEquals("testnamee", orderDtoReceived.getCustomerName(), "2nd Assert")
+        );
+
     }
 
 
@@ -98,7 +119,7 @@ public class Api {
 
     @Test
     public void createOrderAndCheckStatusCodeNegative() {
-        OrderDto orderDto = new OrderDto("testname", "1234567","no");
+        OrderTestDto orderDto = new OrderTestDto("testname", "1234567","no");
         
 
         given()
