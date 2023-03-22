@@ -58,4 +58,49 @@ public class DeliveryTest {
 
     }
 
+    @Test
+    public void createOrderWithoutComment() {
+
+        OrderRealDto orderRealDto = new OrderRealDto("customer", "7777777", "");
+
+        given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .body(orderRealDto)
+                .log()
+                .all()
+                .post("/orders")
+                .then()
+                .log()
+                .all()
+                .extract()
+                .response();
+
+
+    }
+
+    @Test
+    public void createOrderWithoutToken() {
+
+        OrderRealDto orderRealDto = new OrderRealDto("Rain", "333333", "yes");
+
+        given()
+                .header("Content-type", "application/json")
+                //.header("Authorization", "Bearer " + token)
+                .body(orderRealDto)
+                .log()
+                .all()
+                .post("/orders")
+                .then()
+                .log()
+                .all()
+                .extract()
+                .response();
+
+
+    }
+
 }
+
+
+
