@@ -66,7 +66,7 @@
       <recent name="dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DeliveryTest.createOrderWithoutToken">
+  <component name="RunManager" selected="JUnit.DeliveryTest.getOrders">
     <configuration name="DeliveryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
       <extension name="coverage">
@@ -78,38 +78,6 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeliveryTest.createOrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ClassWork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
-      <option name="METHOD_NAME" value="createOrderTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeliveryTest.createOrderWithoutComment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ClassWork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
-      <option name="METHOD_NAME" value="createOrderWithoutComment" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,7 +98,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.positiveLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryTest.deleteOrderByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
       <extension name="coverage">
         <pattern>
@@ -139,8 +107,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.LoginTest" />
-      <option name="METHOD_NAME" value="positiveLoginTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
+      <option name="METHOD_NAME" value="deleteOrderByIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeliveryTest.getOrderById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ClassWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
+      <option name="METHOD_NAME" value="getOrderById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeliveryTest.getOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ClassWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
+      <option name="METHOD_NAME" value="getOrders" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DeliveryTest.createOrderWithoutToken" />
-        <item itemvalue="JUnit.DeliveryTest.createOrderWithoutComment" />
-        <item itemvalue="JUnit.DeliveryTest.createOrderTest" />
+        <item itemvalue="JUnit.DeliveryTest.getOrders" />
+        <item itemvalue="JUnit.DeliveryTest.getOrderById" />
+        <item itemvalue="JUnit.DeliveryTest.deleteOrderByIdTest" />
         <item itemvalue="JUnit.DeliveryTest" />
-        <item itemvalue="JUnit.LoginTest.positiveLoginTest" />
+        <item itemvalue="JUnit.DeliveryTest.createOrderWithoutToken" />
       </list>
     </recent_temporary>
   </component>
@@ -223,5 +223,16 @@
     <MESSAGE value="new methods added, statusCode changed to HttpStatus" />
     <MESSAGE value="new classes added, settings properties added" />
     <option name="LAST_COMMIT_MESSAGE" value="new classes added, settings properties added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryTest.java</url>
+          <line>173</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
