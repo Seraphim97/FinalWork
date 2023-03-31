@@ -156,6 +156,7 @@ public class DeliveryTest {
     public void getOrders() {
 
         int id = orderCreationPrecondition();
+        
 
         OrderRealDto[] orderRealDtoArray = given()
                 .header("Content-type", "application/json")
@@ -168,19 +169,37 @@ public class DeliveryTest {
                 .all()
                 .extract()
                 .as(OrderRealDto[].class);
+        
 
 
         for (int i = 0; i < orderRealDtoArray.length; i++) {
-
-            //ex.3
-            System.out.println("Array length = " + i);
 
             System.out.println(orderRealDtoArray[i].getId());
 
             deleteOrderById(orderRealDtoArray[i].getId());
 
-
         }
+
+        OrderRealDto[] orderRealDtoArrayAfterDeleteon = given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .log()
+                .all()
+                .get("/orders")
+                .then()
+                .log()
+                .all()
+                .extract()
+                .as(OrderRealDto[].class);
+
+            //ex.3
+            System.out.println("Array length = " + orderRealDtoArray.length);
+
+            Assertions.assertEquals(0, orderRealDtoArrayAfterDeleteon.length);
+
+
+
+
 
     }
 
@@ -314,7 +333,7 @@ public class DeliveryTest {
 
         int orderId = orderCreationPrecondition();
 
-        Response response = executePutMethodByStudent("/orders/id/status", orderId);
+        Response response = executePutMethodByStudent("/orders/2982/status", orderId);
 
         OrderRealDto orderRealDto = new OrderRealDto();
 
@@ -324,21 +343,16 @@ public class DeliveryTest {
                 .body(orderRealDto)
                 .log()
                 .all()
-                .put( "/orders/id/status" )
+                .put( "/orders/2982/status" )
                 .then()
                 .log()
                 .all()
-                .statusCode(HttpStatus.SC_BAD_REQUEST)
+                .statusCode(HttpStatus.SC_FORBIDDEN)
                 .assertThat();
 
 
 
-
-
-
-
-
-        //System.out.println();
+        System.out.println();
 
 
     }

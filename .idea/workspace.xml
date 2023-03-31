@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="new classes added, settings properties added">
+    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="new method added in CourierCreation class, new tests added in DeliveryTest class">
       <change afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dto/CourierCreation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PetStoreAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PetStoreAPI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,19 +67,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.DeliveryTest.checkProhibitedEndpointForStudentOrderStatus (1)">
-    <configuration name="RandomStrGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dto.RandomStrGenerator" />
-      <module name="ClassWork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DeliveryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
       <extension name="coverage">
@@ -93,6 +78,22 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeliveryTest.checkProhibitedEndpointForStudentAvailableOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ClassWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
+      <option name="METHOD_NAME" value="checkProhibitedEndpointForStudentAvailableOrders" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,7 +130,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryTest.createCourier" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryTest.getOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
       <extension name="coverage">
         <pattern>
@@ -139,7 +140,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
-      <option name="METHOD_NAME" value="createCourier" />
+      <option name="METHOD_NAME" value="getOrders" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,10 +149,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DeliveryTest.checkProhibitedEndpointForStudentOrderStatus (1)" />
+        <item itemvalue="JUnit.DeliveryTest.checkProhibitedEndpointForStudentAvailableOrders" />
+        <item itemvalue="JUnit.DeliveryTest.getOrders" />
         <item itemvalue="JUnit.DeliveryTest" />
         <item itemvalue="JUnit.DeliveryTest.courierOrderAssignForbidenForStudent" />
-        <item itemvalue="JUnit.DeliveryTest.createCourier" />
-        <item itemvalue="Application.RandomStrGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679502010658</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="new method added in CourierCreation class, new tests added in DeliveryTest class">
+      <created>1680273560752</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680273560752</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -221,6 +229,7 @@
     <MESSAGE value="status 200 changed to HttpStatus.SC_OK" />
     <MESSAGE value="new methods added, statusCode changed to HttpStatus" />
     <MESSAGE value="new classes added, settings properties added" />
-    <option name="LAST_COMMIT_MESSAGE" value="new classes added, settings properties added" />
+    <MESSAGE value="new method added in CourierCreation class, new tests added in DeliveryTest class" />
+    <option name="LAST_COMMIT_MESSAGE" value="new method added in CourierCreation class, new tests added in DeliveryTest class" />
   </component>
 </project>
