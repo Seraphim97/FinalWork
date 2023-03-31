@@ -1,15 +1,18 @@
 package org.example;
 
 import com.google.gson.Gson;
+import dto.CourierCreation;
 import dto.OrderRealDto;
 import helpers.SetupFunctions;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+
 
 public class DeliveryTest {
     public static String token;
@@ -18,7 +21,6 @@ public class DeliveryTest {
     //String baseUrl = setupFunctions.getBaseUrl();
     //String username = setupFunctions.getUsername();
     //String pwd = setupFunctions.getPassword();
-
 
 
     @BeforeAll
@@ -31,9 +33,10 @@ public class DeliveryTest {
 
         RestAssured.baseURI = setupFunctions.getBaseUrl();
 
-        System.out.println( "token: " + setupFunctions.getToken());
+        System.out.println("token: " + setupFunctions.getToken());
 
     }
+
     @Test
     public void createOrderTest() {
 
@@ -105,12 +108,13 @@ public class DeliveryTest {
     public int orderCreationPrecondition() {
 
         OrderRealDto orderRealDto = new OrderRealDto("testname1", "12345678", "no");
+
         Gson gson = new Gson();
 
         int id = given()
                 .header("Content-type", "application/json")
                 .header("Authorization", "Bearer " + token)
-                .body( gson.toJson( orderRealDto ) )
+                .body(gson.toJson(orderRealDto))
                 .log()
                 .all()
                 .post("/orders")
@@ -125,8 +129,10 @@ public class DeliveryTest {
     }
 
     @Test
-    public void getOrderById(){
+    public void getOrderById() {
+
         int id = 2802;
+
         String response = given()
                 .header("Content-type", "application/json")
                 .header("Authorization", "Bearer " + token)
@@ -137,17 +143,17 @@ public class DeliveryTest {
                 .log()
                 .all()
                 .assertThat()
-                .statusCode(200)
+                .statusCode(HttpStatus.SC_OK)
                 .extract()
                 .response()
                 .asString();
 
 
-        Assertions.assertEquals("",response);
+        Assertions.assertEquals("", response);
     }
 
     @Test
-    public void getOrders(){
+    public void getOrders() {
 
         int id = orderCreationPrecondition();
 
@@ -163,21 +169,40 @@ public class DeliveryTest {
                 .extract()
                 .as(OrderRealDto[].class);
 
-        //orderRealDto.length
 
-        for ( int i = 0; i < orderRealDtoArray.length; i++) {
+        for (int i = 0; i < orderRealDtoArray.length; i++) {
+
+            //ex.3
+            System.out.println("Array length = " + i);
 
             System.out.println(orderRealDtoArray[i].getId());
 
             deleteOrderById(orderRealDtoArray[i].getId());
+
+
         }
-        System.out.println();
+
     }
 
 
     @Test
-    public void deleteOrderByIdTest(){
-        deleteOrderById(2802);
+    public void deleteOrderByIdTest() {
+
+        int orderId = orderCreationPrecondition();
+
+        deleteOrderById(orderId);
+
+    }
+
+    @Test
+    public void courierOrderAvailabilityForbidenForStudent() {
+
+        Response response = executeGetMethodByStudent("/orders/available");
+
+        // TODO check response code
+
+        System.out.println();
+
     }
 
     public void deleteOrderById(long id) {
@@ -192,11 +217,134 @@ public class DeliveryTest {
                 .log()
                 .all()
                 .assertThat()
-                .statusCode(200);
+                .statusCode(HttpStatus.SC_OK);
+    }
+
+    public Response executeGetMethodByStudent(String path) {
+
+        Response response = given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .log()
+                .all()
+                .get(path)
+                .then()
+                .log()
+                .all()
+                .extract()
+                .response();
+
+        return response;
+
     }
 
 
+    public Response executePutMethodByStudent(String path, int orderId) {
+
+        Response response = given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .log()
+                .all()
+                .put(path)
+                .then()
+                .log()
+                .all()
+                .extract()
+                .response();
+
+        return response;
+
+
+    }
+
+    @Test
+    public void courierOrderAssignForbidenForStudent() {
+
+        int orderId = orderCreationPrecondition();
+
+        Response response = executePutMethodByStudent("/orders/%s/assign", orderId);
+
+    }
+
+
+    @Test
+    public void createCourier() {
+
+        CourierCreation courierBody = new CourierCreation("serafim777", "password123", "Serafim");
+
+        Gson gson = new Gson();
+
+
+        given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .body(gson.toJson(courierBody))
+                .log()
+                .all()
+                .post("/users/courier" )
+                .then()
+                .log()
+                .all()
+                .statusCode(HttpStatus.SC_OK)
+                .assertThat();
+    }
+
+
+    @Test
+    public void checkProhibitedEndpointForStudentAvailableOrders() {
+
+        given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .log()
+                .all()
+                .get("/orders/available")
+                .then()
+                .log()
+                .all()
+                .statusCode(HttpStatus.SC_FORBIDDEN)
+                .assertThat();
+
+
+    }
+
+    @Test
+    public void checkProhibitedEndpointForStudentOrderStatus() {
+
+        int orderId = orderCreationPrecondition();
+
+        Response response = executePutMethodByStudent("/orders/id/status", orderId);
+
+        OrderRealDto orderRealDto = new OrderRealDto();
+
+        given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .body(orderRealDto)
+                .log()
+                .all()
+                .put( "/orders/id/status" )
+                .then()
+                .log()
+                .all()
+                .statusCode(HttpStatus.SC_BAD_REQUEST)
+                .assertThat();
+
+
+
+
+
+
+
+
+        //System.out.println();
+
+
+    }
+
 }
+
 
 
 
