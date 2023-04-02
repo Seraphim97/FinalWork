@@ -204,23 +204,13 @@ public class DeliveryTest {
     }
 
 
+
     @Test
     public void deleteOrderByIdTest() {
 
         int orderId = orderCreationPrecondition();
 
         deleteOrderById(orderId);
-
-    }
-
-    @Test
-    public void courierOrderAvailabilityForbidenForStudent() {
-
-        Response response = executeGetMethodByStudent("/orders/available");
-
-        // TODO check response code
-
-        System.out.println();
 
     }
 
@@ -278,11 +268,24 @@ public class DeliveryTest {
     }
 
     @Test
+    public void courierOrderAvailabilityForbidenForStudent() {
+
+        Response response = executeGetMethodByStudent("/orders/available");
+
+        Assertions.assertEquals(response.statusCode(), HttpStatus.SC_FORBIDDEN);
+
+
+        System.out.println();
+    }
+
+    @Test
     public void courierOrderAssignForbidenForStudent() {
 
         int orderId = orderCreationPrecondition();
 
-        Response response = executePutMethodByStudent("/orders/%s/assign", orderId);
+        Response response = executePutMethodByStudent("/orders/" +orderId + "/assign", orderId);
+
+        Assertions.assertEquals(response.statusCode(), HttpStatus.SC_FORBIDDEN);
 
     }
 
@@ -309,53 +312,6 @@ public class DeliveryTest {
                 .assertThat();
     }
 
-
-    @Test
-    public void checkProhibitedEndpointForStudentAvailableOrders() {
-
-        given()
-                .header("Content-type", "application/json")
-                .header("Authorization", "Bearer " + token)
-                .log()
-                .all()
-                .get("/orders/available")
-                .then()
-                .log()
-                .all()
-                .statusCode(HttpStatus.SC_FORBIDDEN)
-                .assertThat();
-
-
-    }
-
-    @Test
-    public void checkProhibitedEndpointForStudentOrderStatus() {
-
-        int orderId = orderCreationPrecondition();
-
-        Response response = executePutMethodByStudent("/orders/2982/status", orderId);
-
-        OrderRealDto orderRealDto = new OrderRealDto();
-
-        given()
-                .header("Content-type", "application/json")
-                .header("Authorization", "Bearer " + token)
-                .body(orderRealDto)
-                .log()
-                .all()
-                .put( "/orders/2982/status" )
-                .then()
-                .log()
-                .all()
-                .statusCode(HttpStatus.SC_FORBIDDEN)
-                .assertThat();
-
-
-
-        System.out.println();
-
-
-    }
 
 }
 
