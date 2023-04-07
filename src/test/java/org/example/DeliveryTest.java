@@ -6,6 +6,7 @@ import dto.OrderRealDto;
 import helpers.SetupFunctions;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -57,6 +58,8 @@ public class DeliveryTest {
                 .then()
                 .log()
                 .all()
+                .assertThat()
+                .statusCode(HttpStatus.SC_OK)
                 .extract()
                 .response();
 
@@ -78,6 +81,8 @@ public class DeliveryTest {
                 .then()
                 .log()
                 .all()
+                .assertThat()
+                .statusCode(HttpStatus.SC_OK)
                 .extract()
                 .response();
 
@@ -99,6 +104,8 @@ public class DeliveryTest {
                 .then()
                 .log()
                 .all()
+                .assertThat()
+                .statusCode(HttpStatus.SC_UNAUTHORIZED)
                 .extract()
                 .response();
 
@@ -131,9 +138,9 @@ public class DeliveryTest {
     @Test
     public void getOrderById() {
 
-        int id = 2802;
+        int id = orderCreationPrecondition();
 
-        String response = given()
+        int getId = given()
                 .header("Content-type", "application/json")
                 .header("Authorization", "Bearer " + token)
                 .log()
@@ -145,11 +152,10 @@ public class DeliveryTest {
                 .assertThat()
                 .statusCode(HttpStatus.SC_OK)
                 .extract()
-                .response()
-                .asString();
+                .path("id");
 
 
-        Assertions.assertEquals("", response);
+        Assertions.assertEquals(getId, id);
     }
 
     @Test
@@ -283,7 +289,7 @@ public class DeliveryTest {
 
         int orderId = orderCreationPrecondition();
 
-        Response response = executePutMethodByStudent("/orders/" +orderId + "/assign", orderId);
+        Response response = executePutMethodByStudent("/orders/" + orderId + "/assign", orderId);
 
         Assertions.assertEquals(response.statusCode(), HttpStatus.SC_FORBIDDEN);
 
@@ -293,7 +299,9 @@ public class DeliveryTest {
     @Test
     public void createCourier() {
 
-        CourierCreation courierBody = new CourierCreation("serafim777", "password123", "Serafim");
+        String courierLogin = generateRandomLogin();
+
+        CourierCreation courierBody = new CourierCreation(courierLogin, "password123", "Serafim");
 
         Gson gson = new Gson();
 
@@ -308,8 +316,13 @@ public class DeliveryTest {
                 .then()
                 .log()
                 .all()
-                .statusCode(HttpStatus.SC_OK)
-                .assertThat();
+                .extract()
+                .response();
+
+    }
+
+    public String generateRandomLogin() {
+        return RandomStringUtils.random(8,true,false);
     }
 
 
