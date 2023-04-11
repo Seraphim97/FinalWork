@@ -22,14 +22,14 @@ PetStoreAPI class check-list
 | 5 | Check inventory status, method GET, response 200                          | Passed |
 
 UI check-list
-| № |               Check name                                                  | Status |
+| № |               Check name                                                              | Status |
 -- | -------------|--------
-| 1 | Check authorization with correct login and correct password               |  |
-| 2 | Check authorization with incorrect login and correct password             |  |
-| 3 | Check authorization with correct login and incorrect password             |  |
-| 4 | Check authorization with incorrect login and incorrect password           |  |
-| 5 | Check Sign in button                                                      |  |
-| 6 | Check Popup close button                                                  |  |
+| 1 | Login field must contain 2 or more characters                                         | Passed |
+| 2 | Password field must contain 8-30 characters                                           | Passed |
+| 3 | Check authorization with correct login and correct password                           | Passed |
+| 4 | "Incorrect credentials" message after login with incorrect login or password          | Passed |
+| 5 | Sign in button is active only if login and password fields are filled in              | Passed |
+| 6 | Check Popup close button                                                              | Passed |
 
 
 Web elements for UI check-list

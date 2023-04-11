@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="#issue 6&#10;#issue 7&#10;#issue 8&#10;fixed">
+    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="#Ex.17">
       <change afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/WebAppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +68,7 @@
       <recent name="dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DeliveryTest">
+  <component name="RunManager" selected="JUnit.WebAppTest.correctLogin">
     <configuration name="DeliveryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
       <extension name="coverage">
@@ -78,54 +80,6 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeliveryTest.createCourier" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ClassWork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
-      <option name="METHOD_NAME" value="createCourier" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeliveryTest.createOrderWithoutComment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ClassWork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
-      <option name="METHOD_NAME" value="createOrderWithoutComment" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeliveryTest.getOrderById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ClassWork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
-      <option name="METHOD_NAME" value="getOrderById" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,13 +100,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ClassWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.WebAppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebAppTest.correctLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ClassWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.WebAppTest" />
+      <option name="METHOD_NAME" value="correctLogin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebAppTest.incorrectLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ClassWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.WebAppTest" />
+      <option name="METHOD_NAME" value="incorrectLogin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WebAppTest.correctLogin" />
+        <item itemvalue="JUnit.WebAppTest.incorrectLogin" />
+        <item itemvalue="JUnit.WebAppTest" />
         <item itemvalue="JUnit.DeliveryTest" />
         <item itemvalue="JUnit.DeliveryTest.unsuccessfulOrderCreationWithoutToken" />
-        <item itemvalue="JUnit.DeliveryTest.getOrderById" />
-        <item itemvalue="JUnit.DeliveryTest.createOrderWithoutComment" />
-        <item itemvalue="JUnit.DeliveryTest.createCourier" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680875081916</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="#Ex.17">
+      <created>1681222945100</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681222945100</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -253,6 +261,7 @@
     <MESSAGE value="new method added in CourierCreation class, new tests added in DeliveryTest class" />
     <MESSAGE value="#issue 3&#10;#issue 4&#10;#issue 5&#10;fixed" />
     <MESSAGE value="#issue 6&#10;#issue 7&#10;#issue 8&#10;fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="#issue 6&#10;#issue 7&#10;#issue 8&#10;fixed" />
+    <MESSAGE value="#Ex.17" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Ex.17" />
   </component>
 </project>
