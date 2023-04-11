@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="#issue 3&#10;#issue 4&#10;#issue 5&#10;fixed">
+    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="#issue 6&#10;#issue 7&#10;#issue 8&#10;fixed">
       <change afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dto/CourierCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dto/CourierCreation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680459527083</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="#issue 6&#10;#issue 7&#10;#issue 8&#10;fixed">
+      <created>1680875081916</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680875081916</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -246,6 +252,7 @@
     <MESSAGE value="new classes added, settings properties added" />
     <MESSAGE value="new method added in CourierCreation class, new tests added in DeliveryTest class" />
     <MESSAGE value="#issue 3&#10;#issue 4&#10;#issue 5&#10;fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="#issue 3&#10;#issue 4&#10;#issue 5&#10;fixed" />
+    <MESSAGE value="#issue 6&#10;#issue 7&#10;#issue 8&#10;fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="#issue 6&#10;#issue 7&#10;#issue 8&#10;fixed" />
   </component>
 </project>
