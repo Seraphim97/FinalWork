@@ -34,14 +34,16 @@ public class WebAppTest {
         Configuration.holdBrowserOpen = true;
 
         LoginPage loginPage = new LoginPage();
+
         loginPage.insertLogin("serafim");
+
         loginPage.insertPassword("12345678");
 
-        $(By.xpath("//input[@data-name='password-input']"));
+        loginPage.passwordInput();
 
-        $(By.xpath("//*[@data-name='signIn-button']")).click();
+        loginPage.clickSignInButton();
 
-        $(By.xpath("//*[@data-name='authorizationError-popup']")).shouldBe(Condition.exist);
+        loginPage.authorizationErrorPopUp();
 
 
 
@@ -55,16 +57,18 @@ public class WebAppTest {
         Configuration.holdBrowserOpen = true;
 
         LoginPage loginPage = new LoginPage();
+
         loginPage.insertLogin("serafims");
+
         loginPage.insertPassword("hellouser123");
 
-        $(By.xpath("//input[@data-name='username-input']"));
+        loginPage.usernameInput();
 
-        $(By.xpath("//input[@data-name='password-input']"));
+        loginPage.passwordInput();
 
-        $(By.xpath("//*[@data-name='signIn-button']")).click();
+        loginPage.clickSignInButton();
 
-        $(By.xpath("//*[@data-name='comment-input']")).shouldBe(Condition.visible);
+        loginPage.commentInput();
     }
 
     @Test
