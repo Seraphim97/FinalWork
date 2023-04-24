@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="#Ex.17">
       <change afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/LoginPage.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/org/example/WebAppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
       <recent name="dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WebAppTest.correctLogin">
+  <component name="RunManager" selected="JUnit.WebAppTest">
     <configuration name="DeliveryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
       <extension name="coverage">
@@ -80,22 +80,6 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeliveryTest.unsuccessfulOrderCreationWithoutToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ClassWork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
-      <option name="METHOD_NAME" value="unsuccessfulOrderCreationWithoutToken" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,13 +131,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebAppTest.incorrectLoginAndCheckPopupPageObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ClassWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.WebAppTest" />
+      <option name="METHOD_NAME" value="incorrectLoginAndCheckPopupPageObject" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WebAppTest.correctLogin" />
-        <item itemvalue="JUnit.WebAppTest.incorrectLogin" />
         <item itemvalue="JUnit.WebAppTest" />
+        <item itemvalue="JUnit.WebAppTest.correctLogin" />
+        <item itemvalue="JUnit.WebAppTest.incorrectLoginAndCheckPopupPageObject" />
+        <item itemvalue="JUnit.WebAppTest.incorrectLogin" />
         <item itemvalue="JUnit.DeliveryTest" />
-        <item itemvalue="JUnit.DeliveryTest.unsuccessfulOrderCreationWithoutToken" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681222945100</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="#Ex.17">
+      <created>1681236569449</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681236569449</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
