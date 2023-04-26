@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="#Ex.19">
       <change afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/db/DBmanager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/db/IntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/SetupFunctions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/WebAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/WebAppTest.java" afterDir="false" />
     </list>
@@ -68,17 +72,18 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.WebAppTest.correctLogin">
-    <configuration name="DeliveryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTest.dummy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="db.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="db" />
+      <option name="MAIN_CLASS_NAME" value="db.IntegrationTest" />
+      <option name="METHOD_NAME" value="dummy" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -149,10 +154,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.WebAppTest.correctLogin" />
-        <item itemvalue="JUnit.WebAppTest.incorrectLogin" />
-        <item itemvalue="JUnit.WebAppTest" />
         <item itemvalue="JUnit.WebAppTest.incorrectLoginAndCheckPopupPageObject" />
-        <item itemvalue="JUnit.DeliveryTest" />
+        <item itemvalue="JUnit.WebAppTest.incorrectLogin" />
+        <item itemvalue="JUnit.IntegrationTest.dummy" />
+        <item itemvalue="JUnit.WebAppTest" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682357189828</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="#Ex.19">
+      <created>1682359899512</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1682359899512</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

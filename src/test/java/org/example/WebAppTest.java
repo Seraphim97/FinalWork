@@ -2,22 +2,33 @@ package org.example;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import helpers.SetupFunctions;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 
 import com.codeborne.selenide.Condition;
 
+import java.util.Properties;
+
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 
 public class WebAppTest {
 
+    static String baseUrl;
+    static String username;
+    static String password;
+
+    @BeforeAll
+    public static void setUpAll(){
+        baseUrl = new SetupFunctions().getBaseUrl();
+
+    }
+
     @BeforeEach
     public void setUp(){
 
-        open ( "http://51.250.6.164:3000/signin");
+        open (baseUrl);
 
     }
 
@@ -35,9 +46,9 @@ public class WebAppTest {
 
         LoginPage loginPage = new LoginPage();
 
-        loginPage.insertLogin("serafim");
+        loginPage.insertLogin(loginPage.generateRandomLogin());
 
-        loginPage.insertPassword("12345678");
+        loginPage.insertPassword(loginPage.generateRandomPassword());
 
         loginPage.passwordInput();
 
@@ -57,10 +68,12 @@ public class WebAppTest {
         Configuration.holdBrowserOpen = true;
 
         LoginPage loginPage = new LoginPage();
+        username = new SetupFunctions().getUsername();
+        password = new SetupFunctions().getPassword();
 
-        loginPage.insertLogin("serafims");
+        loginPage.insertLogin(username);
 
-        loginPage.insertPassword("hellouser123");
+        loginPage.insertPassword(password);
 
         loginPage.usernameInput();
 
@@ -75,7 +88,7 @@ public class WebAppTest {
     public void incorrectLoginAndCheckPopupPageObject(){
 
         LoginPage loginPage = new LoginPage();
-        loginPage.insertLogin("123");
+        loginPage.insertLogin(loginPage.generateRandomLogin());
         loginPage.checkSignInDisabled();
 
     }
