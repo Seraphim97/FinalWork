@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="#Ex.19">
       <change afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/db/DBmanager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/db/IntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/SetupFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/db/DBmanager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/db/DBmanager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/WebAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/WebAppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +67,7 @@
       <recent name="dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WebAppTest.correctLogin">
+  <component name="RunManager" selected="JUnit.IntegrationTest.dummy">
     <configuration name="IntegrationTest.dummy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
       <extension name="coverage">
@@ -153,10 +149,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTest.dummy" />
         <item itemvalue="JUnit.WebAppTest.correctLogin" />
         <item itemvalue="JUnit.WebAppTest.incorrectLoginAndCheckPopupPageObject" />
         <item itemvalue="JUnit.WebAppTest.incorrectLogin" />
-        <item itemvalue="JUnit.IntegrationTest.dummy" />
         <item itemvalue="JUnit.WebAppTest" />
       </list>
     </recent_temporary>
@@ -275,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682359899512</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="#Ex.19">
+      <created>1682524535177</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1682524535177</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

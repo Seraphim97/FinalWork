@@ -28,7 +28,9 @@ public class WebAppTest {
     @BeforeEach
     public void setUp(){
 
+
         open (baseUrl);
+
 
     }
 

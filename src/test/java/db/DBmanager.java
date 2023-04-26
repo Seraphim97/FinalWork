@@ -13,18 +13,18 @@ public class DBmanager {
     //private final String user = "userqa08";
     //private final String password = "xItu8gj6xXfsz";
 
-    public Connection connect(){
+    public Connection connect() throws SQLException {
 
         SetupFunctions setupFunctions = new SetupFunctions();
 
-        String host = setupFunctions.getDbhost();
-        String port = setupFunctions.getDbport();
+        String dbhost = setupFunctions.getDbhost();
+        String dbport = setupFunctions.getDbport();
         String dbname = setupFunctions.getDbname();
         String dbusername = setupFunctions.getDbusername();
-        String dbpassword = setupFunctions.getPassword();
+        String dbpassword = setupFunctions.getDbpassword();
 
 
-        String connectionString = host + ":" + port + "/" + dbname;
+        String connectionString = dbhost + ":" + dbport + "/" + dbname;
 
         try {
             Class.forName("org.postgresql.Driver");
@@ -34,7 +34,7 @@ public class DBmanager {
 
 
         Connection connection = null;
-        //connection = DriverManager.getConnection(url, user, password);
+        connection = DriverManager.getConnection(connectionString, dbusername, dbpassword);
 
         System.out.println("Connected to the PostgreSQL server successfully.");
 
