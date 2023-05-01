@@ -1,20 +1,25 @@
 package org.example;
 
 import dto.Credentials;
+import helpers.SetupFunctions;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 
 public class LoginTest {
     @BeforeEach
     public void setup() {
+
+        SetupFunctions setupFunctions = new SetupFunctions();
+
         System.out.println("test start");
-        RestAssured.baseURI = "http://51.250.6.164";
-        RestAssured.port = 8080;
+        RestAssured.baseURI = setupFunctions.getRestAssuredUri();
+        RestAssured.port = setupFunctions.getRestAssuredPort();
 
     }
 
@@ -22,13 +27,13 @@ public class LoginTest {
     @Test
     public void positiveLoginTest() {
 
-        Credentials credentials = new Credentials();
-        credentials.setUsername("serafims");
-        credentials.setPassword("hellouser123");
+        SetupFunctions setupFunctions = new SetupFunctions();
+        setupFunctions.getUsername();
+        setupFunctions.getPassword();
 
         Response response = given()
                 .header("Content-type", "application/json")
-                .body(credentials)
+                .body(setupFunctions)
                 .log()
                 .all()
                 .post("/login/student")
@@ -44,13 +49,13 @@ public class LoginTest {
 
     @Test
     public void negativeLoginTest() {
-        Credentials credentials = new Credentials();
-        credentials.setUsername("12345");
-        credentials.setPassword("hellouser123");
+       LoginPage loginPage = new LoginPage();
+       loginPage.generateRandomLogin();
+       loginPage.generateRandomPassword();
 
         Response response = given()
                 .header("Content-type", "application/json")
-                .body(credentials)
+                .body(loginPage)
                 .log()
                 .all()
                 .post("/login/student")
@@ -65,13 +70,14 @@ public class LoginTest {
 
     @Test
     public void negativePasswordTest() {
-        Credentials credentials = new Credentials();
-        credentials.setUsername("serafims");
-        credentials.setPassword("12345");
+        LoginPage loginPage = new LoginPage();
+        loginPage.generateRandomLogin();
+        loginPage.generateRandomPassword();
+
 
         Response response = given()
                 .header("Content-type", "application/json")
-                .body(credentials)
+                .body(loginPage)
                 .log()
                 .all()
                 .post("/login/student")

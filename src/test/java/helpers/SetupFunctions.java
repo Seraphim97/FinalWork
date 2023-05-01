@@ -2,8 +2,6 @@ package helpers;
 
 import com.google.gson.Gson;
 import dto.Credentials;
-import org.apache.commons.lang3.RandomStringUtils;
-import org.junit.platform.commons.util.StringUtils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -23,6 +21,17 @@ public class SetupFunctions {
     String dbname;
     String dbusername;
     String dbpassword;
+
+    String RestAssuredUri;
+    int RestAssuredPort;
+
+    public String getRestAssuredUri() {
+        return RestAssuredUri;
+    }
+
+    public int getRestAssuredPort() {
+        return RestAssuredPort;
+    }
 
     public String getDbhost() {
         return dbhost;
@@ -48,6 +57,8 @@ public class SetupFunctions {
 
     //db
 
+
+
     public SetupFunctions() {
         try (InputStream input = new FileInputStream("settings.properties")) {
             Properties properties = new Properties();
@@ -57,6 +68,11 @@ public class SetupFunctions {
             password = properties.getProperty("password");
 
             //
+
+
+
+            RestAssuredUri = properties.getProperty("RestAssuredURI");
+            RestAssuredPort = Integer.parseInt(properties.getProperty("RestAssuredPort"));
 
             dbhost = properties.getProperty("dbhost");
             dbname = properties.getProperty("dbname");
