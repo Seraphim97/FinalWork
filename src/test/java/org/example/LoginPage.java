@@ -5,6 +5,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
+import static org.example.WebAppTest.username;
 
 public class LoginPage {
 

@@ -80,9 +80,9 @@ public class Api {
          OrderTestDto orderDto = new OrderTestDto("testname", "1234567", "no");
 
         OrderTestDto orderDtoRandom = new OrderTestDto();
-        orderDtoRandom.setCustomerName( genereteRandomName());
-        orderDtoRandom.setCustomerPhone( genereteRandomPhone());
-        orderDtoRandom.setComment( genereteRandomComment());
+        orderDtoRandom.setCustomerName( generateRandomName());
+        orderDtoRandom.setCustomerPhone( generateRandomPhone());
+        orderDtoRandom.setComment( generateRandomComment());
 
         Gson gson = new Gson();
 
@@ -154,17 +154,17 @@ public class Api {
         Assertions.assertTrue( statusId.contains("OPEN"));
     }
 
-    public String genereteRandomName() {
+    public String generateRandomName() {
         return RandomStringUtils.random(10, true, false);
 
 
     }
 
-    public String genereteRandomPhone() {
+    public String generateRandomPhone() {
         return RandomStringUtils.random(10, false,true);
     }
 
-    public String genereteRandomComment () {
+    public String generateRandomComment() {
         return RandomStringUtils.random(5,true,true);
     }
 
