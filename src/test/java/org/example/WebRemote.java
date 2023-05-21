@@ -49,10 +49,8 @@ public class WebRemote {
     public void incorrectLoginAndCheckPopup(){
 
         $(By.id("username")).setValue("hello123");
-        sleep( 2500 );
 
         $(By.id("password")).setValue("password");
-        sleep( 2500 );
 
     }
 

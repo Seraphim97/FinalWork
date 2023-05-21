@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="#Issue10,corrected">
+    <list default="true" id="1b12e90f-1e99-4451-89fb-91cdc98f1a0c" name="Changes" comment="#HomeWork21, with issues">
       <change afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/WebRemote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/OrderPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/OrdersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/db/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/db/IntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Api.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/WebRemote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/WebRemote.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
       <recent name="dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IntegrationTest.api">
+  <component name="RunManager" selected="JUnit.OrdersTest.loginAndCheckNonExistentOrder">
     <configuration name="IntegrationTest.api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
       <extension name="coverage">
@@ -109,7 +108,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrdersTest.loginAndCheckNonExistentOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
       <extension name="coverage">
         <pattern>
@@ -118,13 +117,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.LoginTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="org.example.OrdersTest" />
+      <option name="METHOD_NAME" value="loginAndCheckNonExistentOrder" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.negativeLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrdersTest.loginAndOrderCreationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ClassWork" />
       <extension name="coverage">
         <pattern>
@@ -133,8 +133,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.LoginTest" />
-      <option name="METHOD_NAME" value="negativeLoginTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.OrdersTest" />
+      <option name="METHOD_NAME" value="loginAndOrderCreationTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -158,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrdersTest.loginAndCheckNonExistentOrder" />
+        <item itemvalue="JUnit.OrdersTest.loginAndOrderCreationTest" />
         <item itemvalue="JUnit.IntegrationTest.api" />
         <item itemvalue="JUnit.IntegrationTest.dummy" />
         <item itemvalue="JUnit.WebRemote.incorrectLoginAndCheckPopup" />
-        <item itemvalue="JUnit.LoginTest" />
-        <item itemvalue="JUnit.LoginTest.negativeLoginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -301,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682965834268</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="#HomeWork21, with issues">
+      <created>1683917067834</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1683917067834</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -319,6 +326,7 @@
     <MESSAGE value="#Ex.19" />
     <MESSAGE value="#DBmanager" />
     <MESSAGE value="#Issue10,corrected" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Issue10,corrected" />
+    <MESSAGE value="#HomeWork21, with issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="#HomeWork21, with issues" />
   </component>
 </project>

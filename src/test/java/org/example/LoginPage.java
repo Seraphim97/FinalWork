@@ -50,4 +50,20 @@ public class LoginPage {
         $(By.xpath("//*[@data-name='comment-input']")).shouldBe(Condition.visible);
     }
 
+    public OrderPage login(String username, String password) {
+        enterUsername(username);
+        enterPassword(password);
+        clickLoginButton();
+        return new OrderPage();
+    }
+
+    private void clickLoginButton() {
+    }
+
+    private void enterPassword(String password) {
+    }
+
+    private void enterUsername(String username) {
+    }
+
 }
